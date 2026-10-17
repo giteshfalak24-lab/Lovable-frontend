@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Cute Romantic Surprise Website - Global Styles & Kawaii Aesthetic
+   ========================================================================== */
+
+:root {
+  --font-main: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwriting: 'Caveat', 'Dancing Script', cursive;
+  --font-display: 'Quicksand', sans-serif;
+
+  /* Color Palette */
+  --pink-lightest: #fff5f7;
+  --pink-50: #ffe8ee;
+  --pink-100: #ffd1dc;
+  --pink-200: #ffb3c6;
+  --pink-300: #ff8fab;
+  --pink-400: #fb6f92;
+  --pink-500: #ff477e;
+  --pink-deep: #d81159;
+
+  --lavender-50: #f8f6ff;
+  --lavender-100: #ede7f6;
+  --lavender-200: #dcd6f7;
+  --lavender-300: #c2b6ec;
+  --lavender-deep: #7e57c2;
+
+  --peach-50: #fff6f0;
+  --peach-100: #ffe8db;
+  --peach-200: #ffcdb2;
+
+  --cream: #fffdf9;
+  --cream-soft: #fff9f0;
+  --gold-sun: #ffd166;
+  --gold-warm: #ffb703;
+
+  --text-dark: #3a2e39;
+  --text-medium: #6b5867;
+  --text-soft: #9c8a98;
+
+  --shadow-soft: 0 10px 30px rgba(255, 143, 171, 0.18);
+  --shadow-card: 0 18px 45px rgba(251, 111, 146, 0.16);
+  --shadow-glow: 0 0 25px rgba(255, 111, 146, 0.35);
+  --shadow-polaroid: 0 12px 32px rgba(58, 46, 57, 0.14);
+
+  --radius-sm: 14px;
+  --radius-md: 22px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--pink-lightest);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background Kawaii Gradient */
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  background: radial-gradient(circle at 10% 20%, rgba(255, 232, 238, 0.9) 0%, rgba(255, 245, 247, 0.95) 45%, rgba(237, 231, 246, 0.8) 100%);
+  overflow-x: hidden;
+}
+
+/* Ambient Floating Hearts Canvas / Layer */
+.floating-elements-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Typography Helpers */
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Pill Badges */
+.kawaii-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid var(--pink-200);
+  border-radius: var(--radius-full);
+  color: var(--pink-deep);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 179, 198, 0.25);
+  backdrop-filter: blur(8px);
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+/* Cute Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--pink-400) 0%, var(--pink-500) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 14px 32px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  font-family: var(--font-main);
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(251, 111, 146, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-height: 52px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(251, 111, 146, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffffff;
+  color: var(--text-dark);
+  border: 2px solid var(--pink-200);
+  border-radius: var(--radius-full);
+  padding: 14px 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: var(--font-main);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  min-height: 52px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-secondary:hover {
+  background: var(--pink-50);
+  border-color: var(--pink-300);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(1px);
+}
+
+/* Card Common Styling */
+.kawaii-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid rgba(255, 209, 220, 0.7);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle Card Glow Header Accent */
+.kawaii-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--pink-300), var(--lavender-300), var(--peach-200), var(--pink-400));
+}
+
+/* Section Containers */
+.section-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px rgba(255, 111, 146, 0.4));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 22px rgba(255, 111, 146, 0.75));
+  }
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes heartBurst {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rainTears {
+  0% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(220px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkleSpin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.8);
+    opacity: 0.4;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkleSpin 3s linear infinite;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-bounce-gentle,
+  .animate-sparkle {
+    animation: none !important;
+  }
+}
+
+/* Audio Player Floating Button */
+.audio-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--pink-200);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pink-deep);
+  box-shadow: 0 4px 18px rgba(255, 143, 171, 0.25);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.audio-toggle-btn:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  box-shadow: 0 6px 22px rgba(255, 143, 171, 0.35);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .section-wrapper {
+    padding: 40px 16px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+
+  .audio-toggle-btn {
+    top: 14px;
+    right: 14px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
